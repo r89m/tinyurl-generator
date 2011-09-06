@@ -1,0 +1,31 @@
+content	tinyurlgen	chrome/content/
+content	tinyurlgen	chrome/content/ contentaccessible=yes
+
+overlay chrome://browser/content/browser.xul	chrome://tinyurlgen/content/browserFF3.xul appversion<=3.6.*
+overlay chrome://browser/content/browser.xul	chrome://tinyurlgen/content/browserFF4.xul appversion>3.6.*
+
+style chrome://global/content/customizeToolbar.xul chrome://tinyurlgen/skin/skin.css
+
+skin tinyurlgen classic/1.0 skin/
+
+locale	tinyurlgen	ca-AD	locale/ca-AD/
+locale	tinyurlgen	cs-CZ	locale/cs-CZ/
+locale	tinyurlgen	de	locale/de/
+locale	tinyurlgen	en-GB	locale/en-GB/
+locale	tinyurlgen	en-US	locale/en-US/
+locale	tinyurlgen	es-AR	locale/es-AR/
+locale	tinyurlgen	es-ES	locale/es-ES/
+locale	tinyurlgen	et-EE	locale/et-EE/
+locale	tinyurlgen	fr	locale/fr/
+locale	tinyurlgen	gl-ES	locale/gl-ES/
+locale	tinyurlgen	he	locale/he/
+locale	tinyurlgen	hu-HU	locale/hu-HU/
+locale	tinyurlgen	ko-KR	locale/ko-KR/
+locale	tinyurlgen	nl	locale/nl/
+locale	tinyurlgen	pt-BR	locale/pt-BR/
+locale	tinyurlgen	ru-RU	locale/ru-RU/
+locale	tinyurlgen	si-LK	locale/si-LK/
+locale	tinyurlgen	sr	locale/sr/
+locale	tinyurlgen	sv-SE	locale/sv-SE/
+locale	tinyurlgen	tr-TR	locale/tr-TR/
+locale	tinyurlgen	vi	locale/vi/

@@ -1,0 +1,16 @@
+﻿<!ENTITY label.generate "Loo TinyURL">
+<!ENTITY label.generatewithpreview "Loo TinyURL (Eelvaatega)">
+<!ENTITY label.generateforpage "Loo TinyURL sellele Lehele">
+<!ENTITY label.generateforlink "Loo TinyURL sellele Lingile">
+<!ENTITY label.options "Sätted...">
+<!ENTITY state.default "TinyURL'i Generaator: Klõpsage, et genereerida TinyURL">
+<!ENTITY options.title.main "TinyURL'i Generaatori sätted">
+<!ENTITY options.title.url "TinyURL'i sätted">
+<!ENTITY options.title.context "Kontekstimenüü Sätted">
+<!ENTITY options.title.shortcut "Otsetee sätted">
+<!ENTITY options.label.previewbydefault "Loo koguaeg 'Eelvaatega' TinyURL'e">
+<!ENTITY options.label.showcontextoptionforpage "Näita TinyURL'i Generaatori võimalusi kui Lehele tehakse paremklõps.">
+<!ENTITY options.label.showcontextoptionforlinks "Näita TinyURL'i Generaatori võimalusi kui Linkidele tehakse paremklõps">
+<!ENTITY options.label.shortcutenabled "Võimaldatud">
+<!ENTITY options.label.shortcutmodifier "Muutja">
+<!ENTITY options.label.shortcutkey "Võti">

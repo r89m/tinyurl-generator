@@ -1,0 +1,16 @@
+<!ENTITY label.generate "TinyURL එකක් හදන්න">
+<!ENTITY label.generatewithpreview "TinyURL එකක් හදන්න (preview සමග)">
+<!ENTITY label.generateforpage "මෙම වෙබ් පිටුවට TinyURL එකක් හදන්න">
+<!ENTITY label.generateforlink "මෙම Link එකට TinyURL එකක් හදන්න">
+<!ENTITY label.options "ඔප්ෂන">
+<!ENTITY state.default "TinyURL සාදනය:TinyURL එකක් සාදා ගැනීමට Click කරන්න">
+<!ENTITY options.title.main "TinyURL සාදනයේ වරණ">
+<!ENTITY options.title.url "TinyURL කට්ටල අංග(Settings)">
+<!ENTITY options.title.context "Context Menu කට්ටල අංග(Settings)">
+<!ENTITY options.title.shortcut "කෙටි පියවර Settings">
+<!ENTITY options.label.previewbydefault "'Previewable' TinyURL සාදන විට Defaults භාවිතා කරන්න">
+<!ENTITY options.label.showcontextoptionforpage "මෙම පිටුව right click කළ විට ඔප්ෂන පෙන්වන්න">
+<!ENTITY options.label.showcontextoptionforlinks "Links right click කළ විට ඔප්ෂන පෙන්වන්න">
+<!ENTITY options.label.shortcutenabled "සක්‍රීය කර ඇත">
+<!ENTITY options.label.shortcutmodifier "වෙනස් කරන්නා(Modifier)">
+<!ENTITY options.label.shortcutkey "යතුර">
