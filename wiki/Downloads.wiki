@@ -2,7 +2,7 @@
 
 = Downloads =
 
-You can download TinyURL Generator from the Mozilla Add-ons Website.
+You can download TinyURL Generator from the [http://addons.mozilla.org Mozilla Add-ons Website].
 
 == Latest Version ==
 
