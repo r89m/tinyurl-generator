@@ -11,7 +11,6 @@
 			<preference id="tinyurlgen-create-preview-by-default" name="extensions.tinyurlgen.createpreviewbydefault" type="bool"/>
 			<preference id="tinyurlgen-show-context-option-for-page" name="extensions.tinyurlgen.showcontextoptionforpage" type="bool"/>
 			<preference id="tinyurlgen-show-context-option-for-links" name="extensions.tinyurlgen.showcontextoptionforlinks" type="bool"/>
-			<preference id="tinyurlgen-icon-in-add-on-bar" name="extensions.tinyurlgen.iconinaddonbar" type="bool"/>
 			<preference id="tinyurlgen-shortcut-enabled" name="extensions.tinyurlgen.shortcutenabled" />
 			<preference id="tinyurlgen-shortcut-modifier" name="extensions.tinyurlgen.shortcutmodifier" />
 			<preference id="tinyurlgen-shortcut-key" name="extensions.tinyurlgen.shortcutkey" />
@@ -27,10 +26,6 @@
 				label="&options.label.showcontextoptionforpage;"/>
 			<checkbox id="context" preference="tinyurlgen-show-context-option-for-links"
 				label="&options.label.showcontextoptionforlinks;"/>
-		</groupbox>
-		<groupbox id="iconinbargroup">
-			<caption label="&options.title.iconinbar;"/>
-			<checkbox id="iconinbar" preference="tinyurlgen-icon-in-add-on-bar" label="&options.label.iconinbar;" />
 		</groupbox>
 		<!--
 		<groupbox>
