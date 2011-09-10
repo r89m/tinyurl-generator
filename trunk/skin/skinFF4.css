@@ -12,9 +12,5 @@
 	}
 	
 #tinyurlgen-status-bar-icon.processing{
-	list-style-image: url("chrome://tinyurlgen/skin/processFF4.gif");
-	}
-	
-#tinyurlgen-status-bar-icon.processing:hover{
-	list-style-image: url("chrome://tinyurlgen/skin/processFF4-dark.gif");
+	list-style-image: url("chrome://tinyurlgen/skin/process.gif");
 	}
