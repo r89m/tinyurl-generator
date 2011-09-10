@@ -8,6 +8,7 @@ style chrome://global/content/customizeToolbar.xul chrome://tinyurlgen/skin/skin
 
 skin tinyurlgen classic/1.0 skin/
 
+locale	tinyurlgen	bg	locale/bg/
 locale	tinyurlgen	ca-AD	locale/ca-AD/
 locale	tinyurlgen	cs-CZ	locale/cs-CZ/
 locale	tinyurlgen	de	locale/de/
@@ -29,3 +30,5 @@ locale	tinyurlgen	sr	locale/sr/
 locale	tinyurlgen	sv-SE	locale/sv-SE/
 locale	tinyurlgen	tr-TR	locale/tr-TR/
 locale	tinyurlgen	vi	locale/vi/
+locale	tinyurlgen      zh-CN	locale/zh-CN/
+locale	tinyurlgen	zh-TW	locale/zh-TW/
