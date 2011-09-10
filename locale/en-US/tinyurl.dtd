@@ -7,12 +7,10 @@
 <!ENTITY options.title.main "TinyURL Generator Preferences">
 <!ENTITY options.title.url "TinyURL Settings">
 <!ENTITY options.title.context "Context Menu Settings">
-<!ENTITY options.title.iconinbar "Add-on Bar Settings">
 <!ENTITY options.title.shortcut "Shortcut Settings">
 <!ENTITY options.label.previewbydefault "Create 'Previewable' TinyURLs by Default">
 <!ENTITY options.label.showcontextoptionforpage "Show option when Page is right clicked">
 <!ENTITY options.label.showcontextoptionforlinks "Show option when Links are right clicked">
-<!ENTITY options.label.iconinbar "Show icon in add-on bar">
 <!ENTITY options.label.shortcutenabled "Enabled">
 <!ENTITY options.label.shortcutmodifier "Modifier">
 <!ENTITY options.label.shortcutkey "Key">
