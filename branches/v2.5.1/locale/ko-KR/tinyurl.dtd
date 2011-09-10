@@ -1,0 +1,16 @@
+<!ENTITY label.generate "TinyURL 만들기">
+<!ENTITY label.generatewithpreview "TinyURL 만들기 (미리보기)">
+<!ENTITY label.generateforpage "이 페이지를 TinyURL로 만들기">
+<!ENTITY label.generateforlink "이 링크를 TinyURL로 만들기">
+<!ENTITY label.options "설정...">
+<!ENTITY state.default "TinyURL Generator: 클릭하면 TinyURL가 만들어 집니다">
+<!ENTITY options.title.main "TinyURL Generator 설정">
+<!ENTITY options.title.url "TinyURL 설정">
+<!ENTITY options.title.context "우클릭 메뉴 설정">
+<!ENTITY options.title.shortcut "Shortcut Settings">
+<!ENTITY options.label.previewbydefault "미리볼 수 있는 TinyURL 만들기를 기본으로 설정">
+<!ENTITY options.label.showcontextoptionforpage "Show option when Page is right clicked">
+<!ENTITY options.label.showcontextoptionforlinks "Show option when Links are right clicked">
+<!ENTITY options.label.shortcutenabled "Enabled">
+<!ENTITY options.label.shortcutmodifier "Modifier">
+<!ENTITY options.label.shortcutkey "Key">

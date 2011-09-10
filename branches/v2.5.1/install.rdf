@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>tinyurl.addon@fast-chat.co.uk</em:id>
+        <em:name>TinyURL Generator</em:name>
+        <em:version>2.5.1</em:version>
+        <em:creator>Richard Miles</em:creator>
+        <em:description>An extension to generate a TinyUrl in the background of any webpage</em:description>
+        <em:homepageURL>http://code.google.com/p/tinyurl-generator/</em:homepageURL>
+        <em:optionsURL>chrome://tinyurlgen/content/options.xul</em:optionsURL>
+        <em:translator>jojaba</em:translator>
+        <em:translator>Ghelman</em:translator>
+        <em:translator>DakSrbija</em:translator>
+        <em:translator>mik</em:translator>
+        <em:translator>57_homer</em:translator>
+        <em:translator>mendinho</em:translator>
+        <em:translator>denmmx</em:translator>
+        <em:translator>Opakoman</em:translator>
+        <em:translator>KNTRO</em:translator>
+        <em:translator>AlePerez92</em:translator>
+        <em:translator>Bling</em:translator>
+        <em:translator>cknblue</em:translator>
+        <em:translator>markh</em:translator>
+        <em:translator>denmmx</em:translator>
+        <em:translator>dinusha84</em:translator>
+        <em:translator>Azreal</em:translator>
+        <em:translator>eren</em:translator>
+        <em:translator>longh</em:translator>
+        <em:translator>WangKing</em:translator>
+        <em:translator>Tim</em:translator>
+        <em:translator>kib82330</em:translator>
+        <em:translator>frajjsen</em:translator>
+        <em:translator>HorstS</em:translator>
+        <em:translator>Grunt</em:translator>
+        <em:targetApplication>
+            <Description>
+                <!-- Firefox -->
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                <em:minVersion>1.5</em:minVersion>
+                <em:maxVersion>9.0.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+    </Description>
+</RDF>
