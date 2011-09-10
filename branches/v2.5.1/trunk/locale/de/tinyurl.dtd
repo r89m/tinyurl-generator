@@ -1,0 +1,16 @@
+<!ENTITY label.generate "TinyURL erzeugen">
+<!ENTITY label.generatewithpreview "TinyURL (mit Vorschau) erzeugen">
+<!ENTITY label.generateforpage "TinyURL für diese Seite erzeugen">
+<!ENTITY label.generateforlink "TinyURL für diesen Link erzeugen">
+<!ENTITY label.options "Einstellungen...">
+<!ENTITY state.default "TinyURL Generator: Um eine TinyURL zu erzeugen bitte klicken">
+<!ENTITY options.title.main "TinyURL Generator Einstellungen">
+<!ENTITY options.title.url "TinyURL Einstellungen">
+<!ENTITY options.title.context "Kontextmenü Einstellungen">
+<!ENTITY options.title.shortcut "Shortcut Einstellungen">
+<!ENTITY options.label.previewbydefault "TinyURL mit Vorschau standardmäßig erzeugen">
+<!ENTITY options.label.showcontextoptionforpage "Bei Rechtsklick auf die Seite Kontextmenü Eintrag anzeigen">
+<!ENTITY options.label.showcontextoptionforlinks "Bei Rechtsklick auf einen Link Kontextmenü Eintrag anzeigen">
+<!ENTITY options.label.shortcutenabled "Aktiviert">
+<!ENTITY options.label.shortcutmodifier "Modifikator">
+<!ENTITY options.label.shortcutkey "Schlüssel">
