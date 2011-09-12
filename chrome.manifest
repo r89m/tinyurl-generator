@@ -19,7 +19,6 @@ locale	tinyurlgen	es-ES	locale/es-ES/
 locale	tinyurlgen	et-EE	locale/et-EE/
 locale	tinyurlgen	fr	locale/fr/
 locale	tinyurlgen	gl-ES	locale/gl-ES/
-locale	tinyurlgen	he	locale/he/
 locale	tinyurlgen	hu-HU	locale/hu-HU/
 locale	tinyurlgen	ko-KR	locale/ko-KR/
 locale	tinyurlgen	nl	locale/nl/
@@ -28,7 +27,6 @@ locale	tinyurlgen	ru-RU	locale/ru-RU/
 locale	tinyurlgen	si-LK	locale/si-LK/
 locale	tinyurlgen	sr	locale/sr/
 locale	tinyurlgen	sv-SE	locale/sv-SE/
-locale	tinyurlgen	tr-TR	locale/tr-TR/
 locale	tinyurlgen	vi	locale/vi/
 locale	tinyurlgen      zh-CN	locale/zh-CN/
 locale	tinyurlgen	zh-TW	locale/zh-TW/
