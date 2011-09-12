@@ -1,0 +1,16 @@
+<!ENTITY label.generate "Créer une URL raccourcie">
+<!ENTITY label.generatewithpreview "Créer une URL raccourcie (avec prévisualisation)">
+<!ENTITY label.generateforpage "Créer une URL raccourcie pour cette page">
+<!ENTITY label.generateforlink "Créer une URL raccourcie pour ce lien">
+<!ENTITY label.options "Options…">
+<!ENTITY state.default "TinyURL Generator : cliquer pour générer une URL raccourcie">
+<!ENTITY options.title.main "Préférences de TinyURL Generator">
+<!ENTITY options.title.url "Paramètres de l'URL raccourcie">
+<!ENTITY options.title.context "Paramètres du menu contextuel">
+<!ENTITY options.title.shortcut "Paramètres des raccourcis">
+<!ENTITY options.label.previewbydefault "Créer par défaut des URL raccourcies que l'on peut prévisualiser">
+<!ENTITY options.label.showcontextoptionforpage "Afficher l'option lors du clic-droit sur la page">
+<!ENTITY options.label.showcontextoptionforlinks "Afficher l'option lors du clic-droit sur les liens">
+<!ENTITY options.label.shortcutenabled "Activé">
+<!ENTITY options.label.shortcutmodifier "Modificateur">
+<!ENTITY options.label.shortcutkey "Touche">

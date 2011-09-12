@@ -1,0 +1,16 @@
+<!ENTITY label.generate "Vytvořit TinyURL">
+<!ENTITY label.generatewithpreview "Vytvořit TinyURL s náhledem">
+<!ENTITY label.generateforpage "Vytvořit TinyURL pro tuto stránku">
+<!ENTITY label.generateforlink "Vytvořit TinyURL pro tento odkaz">
+<!ENTITY label.options "Možnosti...">
+<!ENTITY state.default "TinyURL Generator: kliknutím vytvoříte TinyURL">
+<!ENTITY options.title.main "Předvolby rozšíření TinyURL Generator">
+<!ENTITY options.title.url "Nastavení TinyURL">
+<!ENTITY options.title.context "Nastavení místní nabídky">
+<!ENTITY options.title.shortcut "Nastavení zkratek">
+<!ENTITY options.label.previewbydefault "Standardně vytvářet TinyURL s náhledem">
+<!ENTITY options.label.showcontextoptionforpage "Zobrazit nabídku po kliknutí pravým tlačítkem do stránky">
+<!ENTITY options.label.showcontextoptionforlinks "Zobrazit nabídku po kliknutí pravým tlačítkem do odkazu">
+<!ENTITY options.label.shortcutenabled "Povoleno">
+<!ENTITY options.label.shortcutmodifier "Přepínač">
+<!ENTITY options.label.shortcutkey "Klávesa">
