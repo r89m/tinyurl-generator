@@ -18,7 +18,6 @@ var tinyurlgen = {
     stringsobj : null,
     //A reference to the object that was context clicked
     contextobj : null,
-    
     //A reference to the clipboard object (don't initialise it right away
     clipboard : null,
 	
@@ -33,7 +32,7 @@ var tinyurlgen = {
         }
 		
         //Copy text to clipboard
-        clipboard.copyString(text);
+        tinyurlgen.clipboard.copyString(text);
     },
 	
     //A function to ease Component Class interfacing
