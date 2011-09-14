@@ -1,5 +1,3 @@
-const clipboard = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper); 
-
 var tinyurlgen = {
 	
     //Is the current page being processed
@@ -20,9 +18,19 @@ var tinyurlgen = {
     stringsobj : null,
     //A reference to the object that was context clicked
     contextobj : null,
+    
+    //A reference to the clipboard object (don't initialise it right away
+    clipboard : null,
 	
     //A function to copy the returned URL to the clipboard
     copytoclipboard : function(text){
+        
+        // If a link to the clipboard has not yet been created...
+        if(!tinyurlgen.clipboard)
+        {
+            // Create a link to the clipboard if required
+            tinyurlgen.clipboard = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper); 
+        }
 		
         //Copy text to clipboard
         clipboard.copyString(text);
