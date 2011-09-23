@@ -1,16 +1,16 @@
-<!ENTITY label.generate "«Ø¥ß TinyURL">
-<!ENTITY label.generatewithpreview "«Ø¥ß TinyURL (with preview)">
-<!ENTITY label.generateforpage "«Ø¥ß¦¹¤À­¶ªº TinyURL">
-<!ENTITY label.generateforlink "«Ø¥ß¦¹³sµ²ªº TinyURL">
-<!ENTITY label.options "¿ï¶µ...">
-<!ENTITY state.default "TinyURL Generator: «ö¦¹«Ø¥ß TinyURL">
-<!ENTITY options.title.main "TinyURL Generator ³]©w">
-<!ENTITY options.title.url "TinyURL ³]©w">
-<!ENTITY options.title.context "¤º®e¿ï³æ³]©wContext Menu Settings">
-<!ENTITY options.title.shortcut "±¶®|³]©w">
-<!ENTITY options.label.previewbydefault "¹w³]«Ø¥ß'¥i¹wÄýªº'TinyURLs">
-<!ENTITY options.label.showcontextoptionforpage "·í¦b­¶­±¤W«ö¤U·Æ¹«¥kÁä®ÉÅã¥Ü¿ï¶µ">
-<!ENTITY options.label.showcontextoptionforlinks "·í¦b³sµ²¤W«ö¤U·Æ¹«¥kÁä®ÉÅã¥Ü¿ï¶µ">
-<!ENTITY options.label.shortcutenabled "±Ò°Ê">
-<!ENTITY options.label.shortcutmodifier "­×§ïªÌ">
-<!ENTITY options.label.shortcutkey "Áä­È">
+<!ENTITY label.generate "å»ºç«‹ TinyURL">
+<!ENTITY label.generatewithpreview "å»ºç«‹ TinyURL (with preview)">
+<!ENTITY label.generateforpage "å»ºç«‹æ­¤åˆ†é çš„ TinyURL">
+<!ENTITY label.generateforlink "å»ºç«‹æ­¤é€£çµçš„ TinyURL">
+<!ENTITY label.options "é¸é …...">
+<!ENTITY state.default "TinyURL Generator: æŒ‰æ­¤å»ºç«‹ TinyURL">
+<!ENTITY options.title.main "TinyURL Generator è¨­å®š">
+<!ENTITY options.title.url "TinyURL è¨­å®š">
+<!ENTITY options.title.context "å…§å®¹é¸å–®è¨­å®šContext Menu Settings">
+<!ENTITY options.title.shortcut "æ·å¾‘è¨­å®š">
+<!ENTITY options.label.previewbydefault "é è¨­å»ºç«‹'å¯é è¦½çš„'TinyURLs">
+<!ENTITY options.label.showcontextoptionforpage "ç•¶åœ¨é é¢ä¸ŠæŒ‰ä¸‹æ»‘é¼ å³éµæ™‚é¡¯ç¤ºé¸é …">
+<!ENTITY options.label.showcontextoptionforlinks "ç•¶åœ¨é€£çµä¸ŠæŒ‰ä¸‹æ»‘é¼ å³éµæ™‚é¡¯ç¤ºé¸é …">
+<!ENTITY options.label.shortcutenabled "å•Ÿå‹•">
+<!ENTITY options.label.shortcutmodifier "ä¿®æ”¹è€…">
+<!ENTITY options.label.shortcutkey "éµå€¼">
