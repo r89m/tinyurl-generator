@@ -2,8 +2,8 @@ var tinyurlgen = {
 	
     //Is the current page being processed
     processing : false,
-    //The XMLHTTPRequest Object
-    request : null,
+    //The HTTP Request Object
+    currentRequest : null,
     //Does the link need to be previewable?
     preview : false,
     // Is this the first time the add-on has been run?
@@ -16,6 +16,8 @@ var tinyurlgen = {
     },
     //TinyURL localised strings object
     stringsobj : null,
+    //20 second timeout for requests
+    timeout : 20000,
     //A reference to the object that was context clicked
     contextobj : null,
     //A reference to the clipboard object (don't initialise it right away
@@ -28,7 +30,7 @@ var tinyurlgen = {
         if(!tinyurlgen.clipboard)
         {
             // Create a link to the clipboard if required
-            tinyurlgen.clipboard = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper); 
+            tinyurlgen.clipboard = this.cc("@mozilla.org/widget/clipboardhelper;1", "nsIClipboardHelper");
         }
 		
         //Copy text to clipboard
@@ -41,6 +43,16 @@ var tinyurlgen = {
         return Components.classes[cName].getService(Components.interfaces[ifaceName]);
     },
 	
+    cu : function(cName){
+
+        try{
+            Components.utils.import(cName);   
+        }
+        catch(e){
+            
+        }
+    },
+    
     init : function(){
         //Get the broswer XUL Object
         var appcontent = document.getElementById("appcontent");   // browser
@@ -89,9 +101,20 @@ var tinyurlgen = {
             setTimeout("tinyurlgen.addicontoaddonbar();", 5);
         }
 
-        var appInfo = Components.classes["@mozilla.org/xre/app-info;1"]
-        .getService(Components.interfaces.nsIXULAppInfo);
+        var appInfo = tinyurlgen.cc("@mozilla.org/xre/app-info;1", "nsIXULAppInfo");
         tinyurlgen.FFVersion = appInfo.version;
+    },
+    
+    abort : function(){
+		
+    //Abort current request
+    if(tinyurlgen.currentRequest){
+        tinyurlgen.currentRequest.abort();
+        }
+        
+    //Set current state (error)
+    tinyurlgen.setstate('error');
+    setTimeout('tinyurlgen.reset();', 5000);
     },
     
     addicontoaddonbar : function(){
@@ -124,8 +147,7 @@ var tinyurlgen = {
     applysettings : function(){
 		
         //Load settings from config
-        var prefManager = Components.classes["@mozilla.org/preferences-service;1"]
-        .getService(Components.interfaces.nsIPrefBranch);
+        var prefManager = tinyurlgen.cc("@mozilla.org/preferences-service;1", "nsIPrefBranch");
 		
         tinyurlgen.settings.createpreviewbydefault = prefManager.getBoolPref("extensions.tinyurlgen.createpreviewbydefault");
         tinyurlgen.settings.showpageoption = prefManager.getBoolPref("extensions.tinyurlgen.showcontextoptionforpage");
@@ -182,14 +204,12 @@ var tinyurlgen = {
         //Set state to processing
         tinyurlgen.setstate('processing');
 		
-        //Create XMLHTTPRequest Object
-        tinyurlgen.request = new XMLHttpRequest();
-        //Set onload handler
-        tinyurlgen.request.onload = tinyurlgen.handleresponse;
-        //Constuct request
-        tinyurlgen.request.open("GET", "http://tinyurl.com/api-create.php?url=" + url, true);
+        //Create HTTP Request Object
+        tinyurlgen.currentRequest = new tinyurlgen.request("http://tinyurl.com/api-create.php?url=" + url, tinyurlgen.handleresponse);
         //Send request
-        tinyurlgen.request.send(null);
+        tinyurlgen.currentRequest.get();
+        //Set timeout
+        setTimeout("tinyurlgen.abort()", tinyurlgen.timeout);
     },
 
     generateplain : function(evt){
@@ -220,18 +240,13 @@ var tinyurlgen = {
 
     getwindow : function(winName){
 
-        return Components.classes["@mozilla.org/appshell/window-mediator;1"]
-        .getService(Components.interfaces.nsIWindowMediator)
-        .getMostRecentWindow(winName);
+        return tinyurlgen.cc("@mozilla.org/appshell/window-mediator;1", "nsIWindowMediator").getMostRecentWindow(winName);
     },
 	
-    handleresponse : function(){
-		
-        //Collect XMLHTTPRequest response
-        var response = tinyurlgen.request.responseText;
-        //Destroy XMLHTTPRequest Object
-        tinyurlgen.request = null;
-			
+    handleresponse : function(response){
+					
+        tinyurlgen.currentRequest = null;
+                                        
         //Check that the response is valid
         if(response.match(/http\:\/\/tinyurl.com\//gi)){
             //Is this a previewable link?
