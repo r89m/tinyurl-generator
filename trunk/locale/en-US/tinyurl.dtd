@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Context Menu Settings">
 <!ENTITY options.title.shortcut "Shortcut Settings">
 <!ENTITY options.label.previewbydefault "Create 'Previewable' TinyURLs by Default">
+<!ENTITY options.label.exposedestination "Expand TinyURLs on page load">
 <!ENTITY options.label.showcontextoptionforpage "Show option when Page is right clicked">
 <!ENTITY options.label.showcontextoptionforlinks "Show option when Links are right clicked">
 <!ENTITY options.label.shortcutenabled "Enabled">

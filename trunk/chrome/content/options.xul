@@ -9,6 +9,7 @@
 	<prefpane label="&options.title.main;">
 		<preferences>
 			<preference id="tinyurlgen-create-preview-by-default" name="extensions.tinyurlgen.createpreviewbydefault" type="bool"/>
+                        <preference id="tinyurlgen-expose-destination" name="extensions.tinyurlgen.exposedestination" type="bool" />
 			<preference id="tinyurlgen-show-context-option-for-page" name="extensions.tinyurlgen.showcontextoptionforpage" type="bool"/>
 			<preference id="tinyurlgen-show-context-option-for-links" name="extensions.tinyurlgen.showcontextoptionforlinks" type="bool"/>
 			<preference id="tinyurlgen-shortcut-enabled" name="extensions.tinyurlgen.shortcutenabled" />
@@ -19,6 +20,8 @@
 			<caption label="&options.title.url;"/>
 			<checkbox id="preview" preference="tinyurlgen-create-preview-by-default"
 				label="&options.label.previewbydefault;"/>
+                        <checkbox id="expose" preference="tinyurlgen-expose-destination"
+                                label="&options.label.exposedestination;" />
 		</groupbox>
 		<groupbox>
 			<caption label="&options.title.context;" />

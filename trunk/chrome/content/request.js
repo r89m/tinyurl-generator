@@ -82,7 +82,38 @@ tinyurlgen.request.prototype = {
         }
     },
     
-    getDestination : function(){
+    getDestination : function(segment){
         
+        var that = this;
+
+        var responseReceived = function (data, segment) {
+                // do some stuff here with the data if needed.
+                that.responseCallback(data, segment);
+            };
+        
+            try{
+                // Setup request objects
+                var io = tinyurlgen.cc("@mozilla.org/network/io-service;1", "nsIIOService");
+                var uri = tinyurlgen.cc("@mozilla.org/network/standard-url;1", "nsIURI");
+                uri.spec = this.url;
+
+                that.reqObj = io.newChannelFromURI(uri).QueryInterface(Components.interfaces.nsIHttpChannel);
+
+                that.reqObj.redirectionLimit = 0;
+                that.reqObj.requestMethod = "HEAD";
+
+                // Start request and find redirect location
+                that.reqObj.asyncOpen({
+                    onStartRequest : function(request, context){ },
+                    onStopRequest : function(request, context, statusCode){ 
+
+                        responseReceived(request.getResponseHeader("Location"), segment);
+                    },
+                    onDataAvailable : function(request, context, inputStream, offset, count){} 
+                }, null);
+            }
+            catch(e){
+                alert(e.message);
+            }
     }
 }
