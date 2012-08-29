@@ -4,13 +4,18 @@ var tinyurlgen = {
     processing : false,
     //The HTTP Request Object
     currentRequest : null,
+    //A list of TinyURLs to be exposed
+    checkrequests : {},
     //Does the link need to be previewable?
     preview : false,
     // Is this the first time the add-on has been run?
     firstRun : true,
+    // Regular expression for parsing TinyURLs
+    matchstring : /^https?\:\/\/(preview.)?tinyurl\.com\/([A-z\-0-9]{1,})$/gi,
     //TinyURL options
     settings : {
         createpreviewbydefault : false,
+        exposedestination : false,
         showpageoption : true,
         showlinkoption : true
     },
@@ -53,13 +58,13 @@ var tinyurlgen = {
         }
     },
     
-    init : function(){
+    init : function(){  
         //Get the broswer XUL Object
         var appcontent = document.getElementById("appcontent");   // browser
         //If it exists...
         if(appcontent){
             //Attach a listener that resets the processing state as a new page is loaded
-            appcontent.addEventListener("DOMContentLoaded", tinyurlgen.reset, false);
+            appcontent.addEventListener("DOMContentLoaded", tinyurlgen.pageload, false);
         }
         //Attach listener event to context menu to show and hide menuitem
         var contextMenu = document.getElementById("contentAreaContextMenu");
@@ -107,14 +112,19 @@ var tinyurlgen = {
     
     abort : function(){
 		
-    //Abort current request
-    if(tinyurlgen.currentRequest){
-        tinyurlgen.currentRequest.abort();
-        }
-        
-    //Set current state (error)
-    tinyurlgen.setstate('error');
-    setTimeout('tinyurlgen.reset();', 5000);
+        //Abort current request
+        if(tinyurlgen.currentRequest){
+            try{
+                tinyurlgen.currentRequest.abort();
+            }
+            catch(e){
+                
+            }
+            }
+
+        //Set current state (error)
+        tinyurlgen.setstate('error');
+        setTimeout('tinyurlgen.reset();', 5000);
     },
     
     addicontoaddonbar : function(){
@@ -150,6 +160,7 @@ var tinyurlgen = {
         var prefManager = tinyurlgen.cc("@mozilla.org/preferences-service;1", "nsIPrefBranch");
 		
         tinyurlgen.settings.createpreviewbydefault = prefManager.getBoolPref("extensions.tinyurlgen.createpreviewbydefault");
+        tinyurlgen.settings.exposedestination = prefManager.getBoolPref("extensions.tinyurlgen.exposedestination");
         tinyurlgen.settings.showpageoption = prefManager.getBoolPref("extensions.tinyurlgen.showcontextoptionforpage");
         tinyurlgen.settings.showlinkoption = prefManager.getBoolPref("extensions.tinyurlgen.showcontextoptionforlinks");
 		
@@ -188,14 +199,16 @@ var tinyurlgen = {
             return false;
         }
 			
+        var url;
+                        
         if(evt.target.id == 'tinyurlgen-context-link-option'){
             //Get linked page URL
-            var url = tinyurlgen.contextobj.href;
+            url = tinyurlgen.contextobj.href;
             tinyurlgen.contextobj = null;
         }
         else{
             //Get current page URL
-            var url = content.document.location.href;
+            url = content.document.location.href;
         }
 			
         //Encode URL
@@ -237,6 +250,34 @@ var tinyurlgen = {
         }
         tinyurlgen.generate(evt);
     },
+    
+    getdestination : function(anchor, i){
+        
+        var reg = new RegExp(tinyurlgen.matchstring), match, segment;
+        
+        match = reg.exec(anchor.href);
+        segment = match[2];
+       
+        tinyurlgen.checkrequests[segment] = new tinyurlgen.request("http://tinyurl.com/" + segment, function(dest, segment){
+            
+            // Set the url
+            anchor.href = dest;
+            // Show that we have exposed this link
+            tinyurlgen.checkrequests[segment] = null;
+            
+            // Find the first unfound link
+            for(key in tinyurlgen.checkrequests)
+            {
+                if(tinyurlgen.checkrequests[key] !== null)
+                {
+                    tinyurlgen.checkrequests[key].getDestination(key);
+                    break;
+                }
+            }
+            });
+            
+        return segment;
+    },
 
     getwindow : function(winName){
 
@@ -265,6 +306,30 @@ var tinyurlgen = {
             //Set current state (error)
             tinyurlgen.setstate('error');
             setTimeout('tinyurlgen.reset();', 5000);
+        }
+    },
+    
+    pageload : function()
+    {
+        //Reset the progress icon
+        tinyurlgen.reset();
+        
+        //Update hrefs if desired
+        if(tinyurlgen.settings.exposedestination){
+            var anchors = content.document.getElementsByTagName("a");
+            var a;
+            var firstcheck = null;
+            for(var x = 0; x < anchors.length; x++){
+                a = anchors[x];
+                if(a.href.match(tinyurlgen.matchstring)){
+                    firstcheck = tinyurlgen.getdestination(a, x);
+                }
+            }
+            // If there are any TinyUrls in the page, start exposing them
+            if(firstcheck)
+            {
+                tinyurlgen.checkrequests[firstcheck].getDestination(firstcheck);
+            }
         }
     },
 	
