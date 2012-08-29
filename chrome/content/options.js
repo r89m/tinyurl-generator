@@ -11,18 +11,8 @@ window.addEventListener("load", function(){
 
     //If window exists
     if(win){
-		tinyurlgen = win.tinyurlgen;
-		var vers = tinyurlgen.FFVersion;
-		var verComps = vers.split('.');
-				
-		// If version is 3.6 or lower then hide option
-		if(verComps[0] < 4){
-			// Firefox 3
-			document.getElementById('iconinbargroup').style.display = 'none';
-		}
-		else{
-			// Firefox 4
-		}
+        // Get reference to main window's TinyUrl object
+        tinyurlgen = win.tinyurlgen;
 	}
 }, true);
 
