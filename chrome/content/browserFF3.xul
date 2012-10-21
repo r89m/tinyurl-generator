@@ -3,7 +3,6 @@
 <!DOCTYPE tinyurlgen SYSTEM "chrome://tinyurlgen/locale/tinyurl.dtd">
 <overlay id="tinyurlgen-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 	<script src="tinyurl.js" />
-	<script src="request.js" />
 	<stringbundleset>
 		<stringbundle id="tinyurlgen-locale-strings" src="chrome://tinyurlgen/locale/tinyurl.properties"/>
 	</stringbundleset>

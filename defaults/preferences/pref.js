@@ -1,5 +1,4 @@
 pref("extensions.tinyurlgen.createpreviewbydefault", false);
-pref("extensions.tinyurlgen.exposedestination", true);
 pref("extensions.tinyurlgen.showcontextoptionforpage", true);
 pref("extensions.tinyurlgen.showcontextoptionforlinks", true);
 pref("extensions.tinyurlgen.shortcutenabled", false);

@@ -1,45 +1,31 @@
+const clipboard = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper); 
+
 var tinyurlgen = {
 	
     //Is the current page being processed
     processing : false,
-    //The HTTP Request Object
-    currentRequest : null,
-    //A list of TinyURLs to be exposed
-    checkrequests : {},
+    //The XMLHTTPRequest Object
+    request : null,
     //Does the link need to be previewable?
     preview : false,
     // Is this the first time the add-on has been run?
     firstRun : true,
-    // Regular expression for parsing TinyURLs
-    matchstring : /^https?\:\/\/(preview.)?tinyurl\.com\/([A-z\-0-9]{1,})$/gi,
     //TinyURL options
     settings : {
         createpreviewbydefault : false,
-        exposedestination : false,
         showpageoption : true,
         showlinkoption : true
     },
     //TinyURL localised strings object
     stringsobj : null,
-    //20 second timeout for requests
-    timeout : 20000,
     //A reference to the object that was context clicked
     contextobj : null,
-    //A reference to the clipboard object (don't initialise it right away
-    clipboard : null,
 	
     //A function to copy the returned URL to the clipboard
     copytoclipboard : function(text){
-        
-        // If a link to the clipboard has not yet been created...
-        if(!tinyurlgen.clipboard)
-        {
-            // Create a link to the clipboard if required
-            tinyurlgen.clipboard = this.cc("@mozilla.org/widget/clipboardhelper;1", "nsIClipboardHelper");
-        }
 		
         //Copy text to clipboard
-        tinyurlgen.clipboard.copyString(text);
+        clipboard.copyString(text);
     },
 	
     //A function to ease Component Class interfacing
@@ -48,23 +34,13 @@ var tinyurlgen = {
         return Components.classes[cName].getService(Components.interfaces[ifaceName]);
     },
 	
-    cu : function(cName){
-
-        try{
-            Components.utils.import(cName);   
-        }
-        catch(e){
-            
-        }
-    },
-    
-    init : function(){  
+    init : function(){
         //Get the broswer XUL Object
         var appcontent = document.getElementById("appcontent");   // browser
         //If it exists...
         if(appcontent){
             //Attach a listener that resets the processing state as a new page is loaded
-            appcontent.addEventListener("DOMContentLoaded", tinyurlgen.pageload, false);
+            appcontent.addEventListener("DOMContentLoaded", tinyurlgen.reset, false);
         }
         //Attach listener event to context menu to show and hide menuitem
         var contextMenu = document.getElementById("contentAreaContextMenu");
@@ -106,25 +82,9 @@ var tinyurlgen = {
             setTimeout("tinyurlgen.addicontoaddonbar();", 5);
         }
 
-        var appInfo = tinyurlgen.cc("@mozilla.org/xre/app-info;1", "nsIXULAppInfo");
+        var appInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+        .getService(Components.interfaces.nsIXULAppInfo);
         tinyurlgen.FFVersion = appInfo.version;
-    },
-    
-    abort : function(){
-		
-        //Abort current request
-        if(tinyurlgen.currentRequest){
-            try{
-                tinyurlgen.currentRequest.abort();
-            }
-            catch(e){
-                
-            }
-            }
-
-        //Set current state (error)
-        tinyurlgen.setstate('error');
-        setTimeout('tinyurlgen.reset();', 5000);
     },
     
     addicontoaddonbar : function(){
@@ -157,10 +117,10 @@ var tinyurlgen = {
     applysettings : function(){
 		
         //Load settings from config
-        var prefManager = tinyurlgen.cc("@mozilla.org/preferences-service;1", "nsIPrefBranch");
+        var prefManager = Components.classes["@mozilla.org/preferences-service;1"]
+        .getService(Components.interfaces.nsIPrefBranch);
 		
         tinyurlgen.settings.createpreviewbydefault = prefManager.getBoolPref("extensions.tinyurlgen.createpreviewbydefault");
-        tinyurlgen.settings.exposedestination = prefManager.getBoolPref("extensions.tinyurlgen.exposedestination");
         tinyurlgen.settings.showpageoption = prefManager.getBoolPref("extensions.tinyurlgen.showcontextoptionforpage");
         tinyurlgen.settings.showlinkoption = prefManager.getBoolPref("extensions.tinyurlgen.showcontextoptionforlinks");
 		
@@ -199,16 +159,14 @@ var tinyurlgen = {
             return false;
         }
 			
-        var url;
-                        
         if(evt.target.id == 'tinyurlgen-context-link-option'){
             //Get linked page URL
-            url = tinyurlgen.contextobj.href;
+            var url = tinyurlgen.contextobj.href;
             tinyurlgen.contextobj = null;
         }
         else{
             //Get current page URL
-            url = content.document.location.href;
+            var url = content.document.location.href;
         }
 			
         //Encode URL
@@ -217,12 +175,14 @@ var tinyurlgen = {
         //Set state to processing
         tinyurlgen.setstate('processing');
 		
-        //Create HTTP Request Object
-        tinyurlgen.currentRequest = new tinyurlgen.request("http://tinyurl.com/api-create.php?url=" + url, tinyurlgen.handleresponse);
+        //Create XMLHTTPRequest Object
+        tinyurlgen.request = new XMLHttpRequest();
+        //Set onload handler
+        tinyurlgen.request.onload = tinyurlgen.handleresponse;
+        //Constuct request
+        tinyurlgen.request.open("GET", "http://tinyurl.com/api-create.php?url=" + url, true);
         //Send request
-        tinyurlgen.currentRequest.get();
-        //Set timeout
-        setTimeout("tinyurlgen.abort()", tinyurlgen.timeout);
+        tinyurlgen.request.send(null);
     },
 
     generateplain : function(evt){
@@ -250,44 +210,21 @@ var tinyurlgen = {
         }
         tinyurlgen.generate(evt);
     },
-    
-    getdestination : function(anchor, i){
-        
-        var reg = new RegExp(tinyurlgen.matchstring), match, segment;
-        
-        match = reg.exec(anchor.href);
-        segment = match[2];
-       
-        tinyurlgen.checkrequests[segment] = new tinyurlgen.request("http://tinyurl.com/" + segment, function(dest, segment){
-            
-            // Set the url
-            anchor.href = dest;
-            // Show that we have exposed this link
-            tinyurlgen.checkrequests[segment] = null;
-            
-            // Find the first unfound link
-            for(key in tinyurlgen.checkrequests)
-            {
-                if(tinyurlgen.checkrequests[key] !== null)
-                {
-                    tinyurlgen.checkrequests[key].getDestination(key);
-                    break;
-                }
-            }
-            });
-            
-        return segment;
-    },
 
     getwindow : function(winName){
 
-        return tinyurlgen.cc("@mozilla.org/appshell/window-mediator;1", "nsIWindowMediator").getMostRecentWindow(winName);
+        return Components.classes["@mozilla.org/appshell/window-mediator;1"]
+        .getService(Components.interfaces.nsIWindowMediator)
+        .getMostRecentWindow(winName);
     },
 	
-    handleresponse : function(response){
-					
-        tinyurlgen.currentRequest = null;
-                                        
+    handleresponse : function(){
+		
+        //Collect XMLHTTPRequest response
+        var response = tinyurlgen.request.responseText;
+        //Destroy XMLHTTPRequest Object
+        tinyurlgen.request = null;
+			
         //Check that the response is valid
         if(response.match(/http\:\/\/tinyurl.com\//gi)){
             //Is this a previewable link?
@@ -306,30 +243,6 @@ var tinyurlgen = {
             //Set current state (error)
             tinyurlgen.setstate('error');
             setTimeout('tinyurlgen.reset();', 5000);
-        }
-    },
-    
-    pageload : function()
-    {
-        //Reset the progress icon
-        tinyurlgen.reset();
-        
-        //Update hrefs if desired
-        if(tinyurlgen.settings.exposedestination){
-            var anchors = content.document.getElementsByTagName("a");
-            var a;
-            var firstcheck = null;
-            for(var x = 0; x < anchors.length; x++){
-                a = anchors[x];
-                if(a.href.match(tinyurlgen.matchstring)){
-                    firstcheck = tinyurlgen.getdestination(a, x);
-                }
-            }
-            // If there are any TinyUrls in the page, start exposing them
-            if(firstcheck)
-            {
-                tinyurlgen.checkrequests[firstcheck].getDestination(firstcheck);
-            }
         }
     },
 	
