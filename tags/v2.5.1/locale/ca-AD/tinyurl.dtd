@@ -1,0 +1,16 @@
+<!ENTITY label.generate "Crear TinyURL">
+<!ENTITY label.generatewithpreview "Crear TinyURL (amb vista prèvia)">
+<!ENTITY label.generateforpage "Crear TinyURL per aquesta pàgina">
+<!ENTITY label.generateforlink "Crear TinyURL per aquest enllaç">
+<!ENTITY label.options "Opcions...">
+<!ENTITY state.default "Generador de TinyURL: Clic per generar TinyURL">
+<!ENTITY options.title.main "Preferències de generació de TinyURL">
+<!ENTITY options.title.url "Preferències de TinyURL">
+<!ENTITY options.title.context "Opcions del menú contextual">
+<!ENTITY options.title.shortcut "Opcions de drecera">
+<!ENTITY options.label.previewbydefault "Crear TinyURL amb vista prèvia per defecte">
+<!ENTITY options.label.showcontextoptionforpage "Mostrar opcions quan es cliqui amb el botó dret a la pàgina">
+<!ENTITY options.label.showcontextoptionforlinks "Mostrar opcions quan es cliqui amb el botó dret sobre els enllaços">
+<!ENTITY options.label.shortcutenabled "Habilitat">
+<!ENTITY options.label.shortcutmodifier "Modificador">
+<!ENTITY options.label.shortcutkey "Tecla">

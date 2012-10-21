@@ -1,0 +1,16 @@
+#tinyurlgen-status-bar-icon, #wrapper-tinyurlgen-status-bar-icon{
+	list-style-image: url("chrome://tinyurlgen/skin/link.png");
+	-moz-image-region: rect(0px, 16px, 16px, 0px);
+	}
+	
+#tinyurlgen-status-bar-icon.complete{
+	list-style-image: url("chrome://tinyurlgen/skin/okay.png");
+	}
+	
+#tinyurlgen-status-bar-icon.error{
+	list-style-image: url("chrome://tinyurlgen/skin/error.png");
+	}
+	
+#tinyurlgen-status-bar-icon.processing{
+	list-style-image: url("chrome://tinyurlgen/skin/process.gif");
+	}
