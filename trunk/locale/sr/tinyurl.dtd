@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Подешавања садржајног менија">
 <!ENTITY options.title.shortcut "Подешавања пречица">
 <!ENTITY options.label.previewbydefault "Направи прегледиве TinyURL-ове">
+<!ENTITY options.label.exposedestination "Прошири TinyURLs на страници оптерећења">
 <!ENTITY options.label.showcontextoptionforpage "Прикажи опцију када се притисне десни клик на страницу">
 <!ENTITY options.label.showcontextoptionforlinks "Прикажи опцију када се притисне десни клик на везу">
 <!ENTITY options.label.shortcutenabled "Укључено">

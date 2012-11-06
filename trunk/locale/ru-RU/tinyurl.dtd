@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Установки контекстного меню">
 <!ENTITY options.title.shortcut "Shortcut Settings">
 <!ENTITY options.label.previewbydefault "Создавать ссылки с &quot;предпросмотром&quot; по умолчанию">
+<!ENTITY options.label.exposedestination "Развернуть TinyURLs при загрузке страницы">
 <!ENTITY options.label.showcontextoptionforpage "Show option when Page is right clicked">
 <!ENTITY options.label.showcontextoptionforlinks "Show option when Links are right clicked">
 <!ENTITY options.label.shortcutenabled "Enabled">

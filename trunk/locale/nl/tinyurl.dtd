@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Contextmenu-instellingen">
 <!ENTITY options.title.shortcut "Sneltoetsinstellingen">
 <!ENTITY options.label.previewbydefault "Standaard TinyURL’s aanmaken met voorbeeld">
+<!ENTITY options.label.exposedestination "Expand TinyURLs laden van de pagina">
 <!ENTITY options.label.showcontextoptionforpage "Optie weergeven bij rechtsklik op pagina">
 <!ENTITY options.label.showcontextoptionforlinks "Optie weergeven bij rechtsklik op koppeling">
 <!ENTITY options.label.shortcutenabled "Ingeschakeld">

@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Nastavení místní nabídky">
 <!ENTITY options.title.shortcut "Nastavení zkratek">
 <!ENTITY options.label.previewbydefault "Standardně vytvářet TinyURL s náhledem">
+<!ENTITY options.label.exposedestination "Rozbalte TinyURLs na stránce zátěže">
 <!ENTITY options.label.showcontextoptionforpage "Zobrazit nabídku po kliknutí pravým tlačítkem do stránky">
 <!ENTITY options.label.showcontextoptionforlinks "Zobrazit nabídku po kliknutí pravým tlačítkem do odkazu">
 <!ENTITY options.label.shortcutenabled "Povoleno">

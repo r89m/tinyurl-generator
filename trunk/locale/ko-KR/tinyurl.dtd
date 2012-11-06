@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "우클릭 메뉴 설정">
 <!ENTITY options.title.shortcut "Shortcut Settings">
 <!ENTITY options.label.previewbydefault "미리볼 수 있는 TinyURL 만들기를 기본으로 설정">
+<!ENTITY options.label.exposedestination "페이지 로딩에 TinyURLs 확장">
 <!ENTITY options.label.showcontextoptionforpage "Show option when Page is right clicked">
 <!ENTITY options.label.showcontextoptionforlinks "Show option when Links are right clicked">
 <!ENTITY options.label.shortcutenabled "Enabled">
