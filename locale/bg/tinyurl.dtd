@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Настройки за контексното меню">
 <!ENTITY options.title.shortcut "Настройки за пряк път">
 <!ENTITY options.label.previewbydefault "Създай &quot;Previewable&quot; кратки линкове по подразбиране.">
+<!ENTITY options.label.exposedestination "Разширете TinyURLs за зареждане на страницата">
 <!ENTITY options.label.showcontextoptionforpage "Показвай опцията когато върху дадена страница се кликне с десен бутон.">
 <!ENTITY options.label.showcontextoptionforlinks "Показвай опция когато интернет връзките са цъкнати с десен бутон.">
 <!ENTITY options.label.shortcutenabled "Включен">

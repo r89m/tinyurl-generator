@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Háttér Menü Beállításai">
 <!ENTITY options.title.shortcut "Parancsikon Beállítások">
 <!ENTITY options.label.previewbydefault "Alapértelmezettként 'Előnézetes' TinyURL-ek készítése">
+<!ENTITY options.label.exposedestination "Megmutat TinyURLs oldalon terhelés">
 <!ENTITY options.label.showcontextoptionforpage "Opció mutatása az oldalról jobb klikknél">
 <!ENTITY options.label.showcontextoptionforlinks "Opció mutatása a linknél jobb klikknél">
 <!ENTITY options.label.shortcutenabled "Engedélyezett">

@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Kontekstimenüü Sätted">
 <!ENTITY options.title.shortcut "Otsetee sätted">
 <!ENTITY options.label.previewbydefault "Loo koguaeg 'Eelvaatega' TinyURL'e">
+<!ENTITY options.label.exposedestination "Laienda TinyURLs lehe laadimist">
 <!ENTITY options.label.showcontextoptionforpage "Näita TinyURL'i Generaatori võimalusi kui Lehele tehakse paremklõps.">
 <!ENTITY options.label.showcontextoptionforlinks "Näita TinyURL'i Generaatori võimalusi kui Linkidele tehakse paremklõps">
 <!ENTITY options.label.shortcutenabled "Võimaldatud">

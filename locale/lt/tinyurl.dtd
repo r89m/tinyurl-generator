@@ -1,0 +1,17 @@
+<!ENTITY label.generate "Sukurti TinyURL">
+<!ENTITY label.generatewithpreview "Sukurti TinyURL (su peržiūra)">
+<!ENTITY label.generateforpage "Sukurti TinyURL šiam puslapiui">
+<!ENTITY label.generateforlink "Sukurti TinyURL šiai nuorodai">
+<!ENTITY label.options "Parinktys...">
+<!ENTITY state.default "TinyURL generatorius: paspauskite norėdami sugenruoti TinyURL">
+<!ENTITY options.title.main "TinyURL generatoriaus nustatymai">
+<!ENTITY options.title.url "TinyURL nustatymai">
+<!ENTITY options.title.context "Kontekstinio meniu nustatymai">
+<!ENTITY options.title.shortcut "Nuorodos nustatymai">
+<!ENTITY options.label.previewbydefault "Pagal nutylėjimą kurti „Peržiūrimus“ TinyURL">
+<!ENTITY options.label.exposedestination "Kraunant puslapį išplėsti TinyURL">
+<!ENTITY options.label.showcontextoptionforpage "Paspaudus ant puslapio dešiniu mygtuku rodyti kontekstinio meniu įrašą">
+<!ENTITY options.label.showcontextoptionforlinks "Paspaudus ant nurodos dešiniu mygtuku rodyti kontekstinio meniu įrašą">
+<!ENTITY options.label.shortcutenabled "Įjungta">
+<!ENTITY options.label.shortcutmodifier "Veiksmas?">
+<!ENTITY options.label.shortcutkey "Klavišas">

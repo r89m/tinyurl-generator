@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Paramètres du menu contextuel">
 <!ENTITY options.title.shortcut "Paramètres des raccourcis">
 <!ENTITY options.label.previewbydefault "Créer par défaut des URL raccourcies que l'on peut prévisualiser">
+<!ENTITY options.label.exposedestination "Étendre TinyURLs sur chargement de la page">
 <!ENTITY options.label.showcontextoptionforpage "Afficher l'option lors du clic-droit sur la page">
 <!ENTITY options.label.showcontextoptionforlinks "Afficher l'option lors du clic-droit sur les liens">
 <!ENTITY options.label.shortcutenabled "Activé">

@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Inställningar för Meny">
 <!ENTITY options.title.shortcut "Shortcut Settings">
 <!ENTITY options.label.previewbydefault "Skapa 'förhandsvisade' TinyURL som standard">
+<!ENTITY options.label.exposedestination "Expandera TinyURLs på sidan belastning">
 <!ENTITY options.label.showcontextoptionforpage "Show option when Page is right clicked">
 <!ENTITY options.label.showcontextoptionforlinks "Show option when Links are right clicked">
 <!ENTITY options.label.shortcutenabled "Enabled">

@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Configurações do menu de contexto">
 <!ENTITY options.title.shortcut "Configurações de Atalhos">
 <!ENTITY options.label.previewbydefault "Criar TinyURLs com visualização prévia como padrão">
+<!ENTITY options.label.exposedestination "Expandir TinyURLs no carregamento da página">
 <!ENTITY options.label.showcontextoptionforpage "Exibir opção quando uma Página for clicada com o botão direito">
 <!ENTITY options.label.showcontextoptionforlinks "Exibir opção quando um Link for clicado com o botão direito">
 <!ENTITY options.label.shortcutenabled "Habilitado">

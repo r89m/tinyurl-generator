@@ -9,6 +9,7 @@
 <!ENTITY options.title.context "Context Menu කට්ටල අංග(Settings)">
 <!ENTITY options.title.shortcut "කෙටි පියවර Settings">
 <!ENTITY options.label.previewbydefault "'Previewable' TinyURL සාදන විට Defaults භාවිතා කරන්න">
+<!ENTITY options.label.exposedestination "Expand TinyURLs on page load">
 <!ENTITY options.label.showcontextoptionforpage "මෙම පිටුව right click කළ විට ඔප්ෂන පෙන්වන්න">
 <!ENTITY options.label.showcontextoptionforlinks "Links right click කළ විට ඔප්ෂන පෙන්වන්න">
 <!ENTITY options.label.shortcutenabled "සක්‍රීය කර ඇත">
