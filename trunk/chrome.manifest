@@ -21,12 +21,14 @@ locale	tinyurlgen	fr	locale/fr/
 locale	tinyurlgen	gl-ES	locale/gl-ES/
 locale	tinyurlgen	hu-HU	locale/hu-HU/
 locale	tinyurlgen	ko-KR	locale/ko-KR/
+locale	tinyurlgen	lt		locale/lt/
 locale	tinyurlgen	nl	locale/nl/
+locale	tinyurlgen	pl	locale/pl
 locale	tinyurlgen	pt-BR	locale/pt-BR/
 locale	tinyurlgen	ru-RU	locale/ru-RU/
 locale	tinyurlgen	si-LK	locale/si-LK/
 locale	tinyurlgen	sr	locale/sr/
 locale	tinyurlgen	sv-SE	locale/sv-SE/
 locale	tinyurlgen	vi	locale/vi/
-locale	tinyurlgen      zh-CN	locale/zh-CN/
+locale	tinyurlgen  zh-CN	locale/zh-CN/
 locale	tinyurlgen	zh-TW	locale/zh-TW/
