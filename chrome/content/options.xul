@@ -12,9 +12,9 @@
                         <preference id="tinyurlgen-expose-destination" name="extensions.tinyurlgen.exposedestination" type="bool" />
 			<preference id="tinyurlgen-show-context-option-for-page" name="extensions.tinyurlgen.showcontextoptionforpage" type="bool"/>
 			<preference id="tinyurlgen-show-context-option-for-links" name="extensions.tinyurlgen.showcontextoptionforlinks" type="bool"/>
-			<preference id="tinyurlgen-shortcut-enabled" name="extensions.tinyurlgen.shortcutenabled" />
-			<preference id="tinyurlgen-shortcut-modifier" name="extensions.tinyurlgen.shortcutmodifier" />
-			<preference id="tinyurlgen-shortcut-key" name="extensions.tinyurlgen.shortcutkey" />
+			<preference id="tinyurlgen-shortcut-enabled" name="extensions.tinyurlgen.shortcutenabled" type="bool" />
+			<preference id="tinyurlgen-shortcut-modifier" name="extensions.tinyurlgen.shortcutmodifier" type="bool" />
+			<preference id="tinyurlgen-shortcut-key" name="extensions.tinyurlgen.shortcutkey" type="bool" />
 		</preferences>
 		<groupbox>
 			<caption label="&options.title.url;"/>
