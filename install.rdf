@@ -13,6 +13,7 @@
         em:id="tinyurl.addon@fast-chat.co.uk"
         em:name="TinyURL Generator"
         em:version="2.6.0"
+        em:type="2"
         em:creator="Richard Miles"
         em:description="An extension to generate a TinyUrl in the background of any webpage"
         em:homepageURL="http://code.google.com/p/tinyurl-generator/"
