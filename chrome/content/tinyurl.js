@@ -103,7 +103,7 @@ var tinyurlgen = {
         
         if(tinyurlgen.firstRun){
             // First run - add icon to addon bar and show it
-            setTimeout("tinyurlgen.addicontoaddonbar();", 5);
+            setTimeout(function(){tinyurlgen.addicontoaddonbar();}, 5);
         }
 
         var appInfo = tinyurlgen.cc("@mozilla.org/xre/app-info;1", "nsIXULAppInfo");
@@ -124,7 +124,7 @@ var tinyurlgen = {
 
         //Set current state (error)
         tinyurlgen.setstate('error');
-        setTimeout('tinyurlgen.reset();', 5000);
+        setTimeout(function(){tinyurlgen.reset();}, 5000);
     },
     
     addicontoaddonbar : function(){
@@ -222,7 +222,7 @@ var tinyurlgen = {
         //Send request
         tinyurlgen.currentRequest.get();
         //Set timeout
-        setTimeout("tinyurlgen.abort()", tinyurlgen.timeout);
+        setTimeout(function(){tinyurlgen.abort()}, tinyurlgen.timeout);
     },
 
     generateplain : function(evt){
@@ -300,12 +300,12 @@ var tinyurlgen = {
             //Copy URL to clipboard
             tinyurlgen.copytoclipboard(response);
             //Reset state in 5 seconds
-            setTimeout('tinyurlgen.reset();', 5000);
+            setTimeout(function(){tinyurlgen.reset();}, 5000);
         }
         else{
             //Set current state (error)
             tinyurlgen.setstate('error');
-            setTimeout('tinyurlgen.reset();', 5000);
+            setTimeout(function(){tinyurlgen.reset();}, 5000);
         }
     },
     
