@@ -1,0 +1,17 @@
+<!ENTITY label.generate "建立 TinyURL">
+<!ENTITY label.generatewithpreview "建立 TinyURL (with preview)">
+<!ENTITY label.generateforpage "建立此分頁的 TinyURL">
+<!ENTITY label.generateforlink "建立此連結的 TinyURL">
+<!ENTITY label.options "選項...">
+<!ENTITY state.default "TinyURL Generator: 按此建立 TinyURL">
+<!ENTITY options.title.main "TinyURL Generator 設定">
+<!ENTITY options.title.url "TinyURL 設定">
+<!ENTITY options.title.context "內容選單設定Context Menu Settings">
+<!ENTITY options.title.shortcut "捷徑設定">
+<!ENTITY options.label.previewbydefault "預設建立'可預覽的'TinyURLs">
+<!ENTITY options.label.exposedestination "頁面加載展開TinyURLs">
+<!ENTITY options.label.showcontextoptionforpage "當在頁面上按下滑鼠右鍵時顯示選項">
+<!ENTITY options.label.showcontextoptionforlinks "當在連結上按下滑鼠右鍵時顯示選項">
+<!ENTITY options.label.shortcutenabled "啟動">
+<!ENTITY options.label.shortcutmodifier "修改者">
+<!ENTITY options.label.shortcutkey "鍵值">

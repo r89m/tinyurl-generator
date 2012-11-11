@@ -1,0 +1,20 @@
+#tinyurlgen-generate-button, #wrapper-tinyurlgen-generate-button{
+    list-style-image: url("chrome://tinyurlgen/skin/toolbarbtn.png");
+    -moz-image-region: rect(0px, 24px, 24px, 0px);
+    }
+
+#tinyurlgen-generate-button:hover{
+    -moz-image-region: rect(24px, 24px, 48px, 0px);
+    }
+
+toolbar[iconsize="small"] #tinyurlgen-generate-button{
+    -moz-image-region: rect(0px, 40px, 16px, 24px);
+    }
+
+toolbar[iconsize="small"] #tinyurlgen-generate-button:hover{
+    -moz-image-region: rect(16px, 40px, 32px, 24px);
+    }
+
+#tinyurlgen-status-bar-icon, #wrapper-tinyurlgen-status-bar-icon{
+	list-style-image: url("chrome://tinyurlgen/skin/link.png");
+	}

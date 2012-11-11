@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE tinyurlgen SYSTEM "chrome://tinyurlgen/locale/tinyurl.dtd">
+<prefwindow
+        id="tinyurlgen-options"
+	windowtype="TinyURL:Options"
+	title="&options.title.main;"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script src="options.js" />
+	<prefpane label="&options.title.main;">
+		<preferences>
+			<preference id="tinyurlgen-create-preview-by-default" name="extensions.tinyurlgen.createpreviewbydefault" type="bool"/>
+                        <preference id="tinyurlgen-expose-destination" name="extensions.tinyurlgen.exposedestination" type="bool" />
+			<preference id="tinyurlgen-show-context-option-for-page" name="extensions.tinyurlgen.showcontextoptionforpage" type="bool"/>
+			<preference id="tinyurlgen-show-context-option-for-links" name="extensions.tinyurlgen.showcontextoptionforlinks" type="bool"/>
+			<preference id="tinyurlgen-shortcut-enabled" name="extensions.tinyurlgen.shortcutenabled" type="bool" />
+			<preference id="tinyurlgen-shortcut-modifier" name="extensions.tinyurlgen.shortcutmodifier" type="bool" />
+			<preference id="tinyurlgen-shortcut-key" name="extensions.tinyurlgen.shortcutkey" type="bool" />
+		</preferences>
+		<groupbox>
+			<caption label="&options.title.url;"/>
+			<checkbox id="preview" preference="tinyurlgen-create-preview-by-default"
+				label="&options.label.previewbydefault;"/>
+                        <checkbox id="expose" preference="tinyurlgen-expose-destination"
+                                label="&options.label.exposedestination;" />
+		</groupbox>
+		<groupbox>
+			<caption label="&options.title.context;" />
+			<checkbox id="context" preference="tinyurlgen-show-context-option-for-page"
+				label="&options.label.showcontextoptionforpage;"/>
+			<checkbox id="context" preference="tinyurlgen-show-context-option-for-links"
+				label="&options.label.showcontextoptionforlinks;"/>
+		</groupbox>
+		<!--
+		<groupbox>
+			<caption label="&options.title.shortcut;" />
+			<checkbox id="context" preference="tinyurlgen-shortcut-enabled"
+				label="&options.label.shortcutenabled;"/>
+			<vbox>
+			    <label control="your-name" value="Enter your name:"/>
+			    <textbox id="your-name" value="John"/>
+			</vbox>
+		</groupbox>
+		-->
+	</prefpane>
+</prefwindow>

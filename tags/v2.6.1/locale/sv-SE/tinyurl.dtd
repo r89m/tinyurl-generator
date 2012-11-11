@@ -1,0 +1,17 @@
+<!ENTITY label.generate "Skapa TinyURL">
+<!ENTITY label.generatewithpreview "Skapa TinyURL med förhandsgranskning">
+<!ENTITY label.generateforpage "Create TinyURL for this Page">
+<!ENTITY label.generateforlink "Create TinyURL for this Link">
+<!ENTITY label.options "Alternativ...">
+<!ENTITY state.default "TinyURL generator: Klicka för att generera TinyURL">
+<!ENTITY options.title.main "TinyURL Generator inställningar">
+<!ENTITY options.title.url "TinyURL inställningar">
+<!ENTITY options.title.context "Inställningar för Meny">
+<!ENTITY options.title.shortcut "Shortcut Settings">
+<!ENTITY options.label.previewbydefault "Skapa 'förhandsvisade' TinyURL som standard">
+<!ENTITY options.label.exposedestination "Expandera TinyURLs på sidan belastning">
+<!ENTITY options.label.showcontextoptionforpage "Show option when Page is right clicked">
+<!ENTITY options.label.showcontextoptionforlinks "Show option when Links are right clicked">
+<!ENTITY options.label.shortcutenabled "Enabled">
+<!ENTITY options.label.shortcutmodifier "Modifier">
+<!ENTITY options.label.shortcutkey "Key">
