@@ -1,0 +1,17 @@
+<!ENTITY label.generate "Направи TinyURL">
+<!ENTITY label.generatewithpreview "Направи TinyURL (са прегледом)">
+<!ENTITY label.generateforpage "Направи TinyURL за ову страницу">
+<!ENTITY label.generateforlink "Направи TinyURL за ову везу">
+<!ENTITY label.options "Опције...">
+<!ENTITY state.default "Творац TinyURL-а: кликните да бисте направили TinyURL">
+<!ENTITY options.title.main "Подешавања творца TinyURL-а">
+<!ENTITY options.title.url "Подешавања TinyURL-а">
+<!ENTITY options.title.context "Подешавања садржајног менија">
+<!ENTITY options.title.shortcut "Подешавања пречица">
+<!ENTITY options.label.previewbydefault "Направи прегледиве TinyURL-ове">
+<!ENTITY options.label.exposedestination "Прошири TinyURLs на страници оптерећења">
+<!ENTITY options.label.showcontextoptionforpage "Прикажи опцију када се притисне десни клик на страницу">
+<!ENTITY options.label.showcontextoptionforlinks "Прикажи опцију када се притисне десни клик на везу">
+<!ENTITY options.label.shortcutenabled "Укључено">
+<!ENTITY options.label.shortcutmodifier "Модификатор">
+<!ENTITY options.label.shortcutkey "Кључ">

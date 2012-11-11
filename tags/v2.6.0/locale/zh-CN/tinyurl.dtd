@@ -1,0 +1,17 @@
+<!ENTITY label.generate "生成TinyURL">
+<!ENTITY label.generatewithpreview "生成TinyURL(预览)">
+<!ENTITY label.generateforpage "为此页面生成TinyURL">
+<!ENTITY label.generateforlink "为此链接生成TinyURL">
+<!ENTITY label.options "选项...">
+<!ENTITY state.default "TinyURL生成器: 点击生成TinyURL">
+<!ENTITY options.title.main "TinyURL生成器选项">
+<!ENTITY options.title.url "TinyURL设置">
+<!ENTITY options.title.context "上下文菜单设置">
+<!ENTITY options.title.shortcut "快捷键设置">
+<!ENTITY options.label.previewbydefault "默认生成可预览的TinyURL">
+<!ENTITY options.label.exposedestination "页面加载展开TinyURLs">
+<!ENTITY options.label.showcontextoptionforpage "右键点击页面时显示菜单">
+<!ENTITY options.label.showcontextoptionforlinks "右键点击链接时显示菜单">
+<!ENTITY options.label.shortcutenabled "启用">
+<!ENTITY options.label.shortcutmodifier "组合键">
+<!ENTITY options.label.shortcutkey "键">

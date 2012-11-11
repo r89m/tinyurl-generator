@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://tinyurlgen/skin/skin.css" type="text/css"?>
+<!DOCTYPE tinyurlgen SYSTEM "chrome://tinyurlgen/locale/tinyurl.dtd">
+<overlay id="tinyurlgen-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script src="tinyurl.js" />
+	<script src="request.js" />
+	<stringbundleset>
+		<stringbundle id="tinyurlgen-locale-strings" src="chrome://tinyurlgen/locale/tinyurl.properties"/>
+	</stringbundleset>
+
+	<toolbarpalette id="BrowserToolbarPalette">
+	    <toolbarbutton id="tinyurlgen-generate-button"
+		label="&label.generate;"
+		tooltiptext="&label.generateforpage;"
+		class="toolbarbutton-1"
+		oncommand="tinyurlgen.generatedefault(event);" />
+	</toolbarpalette>
+
+	<statusbar id="status-bar">
+		<statusbarpanel id="tinyurlgen-status-bar-icon" class="statusbarpanel-iconic" context="tinyurlgen-status-bar-menu"
+			src="chrome://tinyurlgen/skin/link.png" tooltiptext="&state.default;" onclick="tinyurlgen.generatedefault(event)" />
+		<menupopup id="tinyurlgen-status-bar-menu">
+			<menuitem id="tinyurlgen-button-create" label="&label.generate;" onclick="tinyurlgen.generateplain(event)" />
+			<menuitem id="tinyurlgen-button-create-with-preview" label="&label.generatewithpreview;" onclick="tinyurlgen.generatepreview(event)" />
+			<menuseparator/>
+			<menuitem label="&label.options;" onclick="tinyurlgen.showoptions()" />
+		</menupopup>
+	</statusbar>
+
+	<popup id="contentAreaContextMenu">
+		<menuitem id="tinyurlgen-context-page-option" label="&label.generateforpage;" oncommand="tinyurlgen.generatedefault(event)" />
+		<menuitem id="tinyurlgen-context-link-option" label="&label.generateforlink;" oncommand="tinyurlgen.generatedefault(event)" />
+	</popup>
+
+	<!--
+	<keyset id="mainKeyset">
+	    <key id="tinyurlgen-shortcut-config" disabled="false"
+		   keycode="VK_F12"
+		   oncommand="tinyurlgen.generatedefault(event)" />
+
+	</keyset>
+	-->
+</overlay>

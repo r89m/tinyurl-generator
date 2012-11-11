@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<RDF:RDF 
+    xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+    xmlns:NC="http://home.netscape.com/NC-rdf#"
+    xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <RDF:Description
+        RDF:about="rdf:#$dvsuh"
+        em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+        em:minVersion="1.5"
+        em:maxVersion="15.*" />
+    <RDF:Description
+        RDF:about="urn:mozilla:install-manifest"
+        em:id="tinyurl.addon@fast-chat.co.uk"
+        em:name="TinyURL Generator"
+        em:version="2.6.0"
+        em:creator="Richard Miles"
+        em:description="An extension to generate a TinyUrl in the background of any webpage"
+        em:homepageURL="http://code.google.com/p/tinyurl-generator/"
+        em:optionsURL="chrome://tinyurlgen/content/options.xul">
+    <em:translator>jojaba</em:translator>
+    <em:translator>Ghelman</em:translator>
+    <em:translator>DakSrbija</em:translator>
+    <em:translator>mik</em:translator>
+    <em:translator>57_homer</em:translator>
+    <em:translator>mendinho</em:translator>
+    <em:translator>denmmx</em:translator>
+    <em:translator>Opakoman</em:translator>
+    <em:translator>KNTRO</em:translator>
+    <em:translator>AlePerez92</em:translator>
+    <em:translator>Bling</em:translator>
+    <em:translator>cknblue</em:translator>
+    <em:translator>markh</em:translator>
+    <em:translator>dinusha84</em:translator>
+    <em:translator>Azreal</em:translator>
+    <em:translator>eren</em:translator>
+    <em:translator>longh</em:translator>
+    <em:translator>WangKing</em:translator>
+    <em:translator>Tim</em:translator>
+    <em:translator>kib82330</em:translator>
+    <em:translator>frajjsen</em:translator>
+    <em:translator>HorstS</em:translator>
+    <em:translator>Grunt</em:translator>
+    <em:targetApplication RDF:resource="rdf:#$dvsuh"/>
+  </RDF:Description>
+</RDF:RDF>
