@@ -41,6 +41,7 @@
     <em:translator>frajjsen</em:translator>
     <em:translator>HorstS</em:translator>
     <em:translator>Grunt</em:translator>
+    <em:translator>Redux</em:translator>
     <em:targetApplication RDF:resource="rdf:#$dvsuh"/>
   </RDF:Description>
 </RDF:RDF>
