@@ -1,0 +1,17 @@
+<!ENTITY label.generate "Utwórz TinyURL">
+<!ENTITY label.generatewithpreview "Utwórz TinyURL (z podglądem)">
+<!ENTITY label.generateforpage "Utwórz TinyURL dla tej strony">
+<!ENTITY label.generateforlink "Utwórz TinyURL dla tego linku">
+<!ENTITY label.options "Opcje">
+<!ENTITY state.default "TinyURL Generator: Kliknij by wygenerować TinyURL">
+<!ENTITY options.title.main "Ustawienia TinyURL Generator">
+<!ENTITY options.title.url "Ustawienia TinyURL">
+<!ENTITY options.title.context "Ustawienia menu kontekstowego">
+<!ENTITY options.title.shortcut "Ustawienia skrótów">
+<!ENTITY options.label.previewbydefault "Domyślnie twórz TinyURL'e możliwe do podglądu">
+<!ENTITY options.label.exposedestination "Poszerz TinyURLe podczas ładowania strony">
+<!ENTITY options.label.showcontextoptionforpage "Pokaż opcję gdy stronę otworzono prawo-klikiem">
+<!ENTITY options.label.showcontextoptionforlinks "Pokaż opcję gdy link otworzono prawo-klikiem">
+<!ENTITY options.label.shortcutenabled "Włączone">
+<!ENTITY options.label.shortcutmodifier "Modyfikator">
+<!ENTITY options.label.shortcutkey "Klucz">
