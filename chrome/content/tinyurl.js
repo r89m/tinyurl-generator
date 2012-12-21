@@ -16,9 +16,32 @@ var tinyurlgen = {
     settings : {
         createpreviewbydefault : false,
         exposedestination : false,
+        shortcutenabled : false,
         showpageoption : true,
         showlinkoption : true
     },
+    //TinyURL shortcut settings
+    shortcut : {
+        key : "",
+        modifiers : {
+            accel : false,
+            alt : false,
+            shift : false
+        }
+    },
+    //List of keys available for shortcuts
+    keylist : [
+        "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
+        "0","1","2","3","4","5","6","7","8","9",
+        "VK_RETURN",
+        "VK_LEFT","VK_UP","VK_RIGHT","VK_DOWN",
+        ";",",",".","/","`","(","\\",")",
+        "VK_PAGE_UP","VK_PAGE_DOWN","VK_END","VK_HOME",
+        "VK_INSERT","VK_DELETE",
+        "=","VK_MULTIPLY","VK_ADD","VK_SUBTRACT","VK_DECIMAL","VK_DIVIDE",
+        "VK_F1","VK_F2","VK_F3","VK_F4","VK_F5","VK_F6","VK_F7","VK_F8","VK_F9","VK_F10","VK_F11","VK_F12",
+        "VK_F13","VK_F14","VK_F15","VK_F16","VK_F17","VK_F18","VK_F19","VK_F20","VK_F21","VK_F22","VK_F23","VK_F24",
+        ],
     //TinyURL localised strings object
     stringsobj : null,
     //20 second timeout for requests
@@ -163,29 +186,98 @@ var tinyurlgen = {
         tinyurlgen.settings.exposedestination = prefManager.getBoolPref("extensions.tinyurlgen.exposedestination");
         tinyurlgen.settings.showpageoption = prefManager.getBoolPref("extensions.tinyurlgen.showcontextoptionforpage");
         tinyurlgen.settings.showlinkoption = prefManager.getBoolPref("extensions.tinyurlgen.showcontextoptionforlinks");
+        tinyurlgen.settings.shortcutenabled = prefManager.getBoolPref("extensions.tinyurlgen.shortcutenabled");
+        
+        tinyurlgen.shortcut.key = prefManager.getCharPref("extensions.tinyurlgen.shortcutkey");
+        tinyurlgen.shortcut.modifiers.accel = prefManager.getBoolPref("extensions.tinyurlgen.shortcutmodifier.accel");
+        tinyurlgen.shortcut.modifiers.alt = prefManager.getBoolPref("extensions.tinyurlgen.shortcutmodifier.alt");
+        tinyurlgen.shortcut.modifiers.shift = prefManager.getBoolPref("extensions.tinyurlgen.shortcutmodifier.shift");
 		
         tinyurlgen.firstRun = prefManager.getBoolPref("extensions.tinyurlgen.firstrun");
         if(tinyurlgen.firstRun){
             prefManager.setBoolPref("extensions.tinyurlgen.firstrun", false);
         }
-			
+        
+        //Set keyboard shortcut properties
+        var keydef_id = "tinyurlgen-shortcut-generate";
+        var keyset = document.getElementById(keydef_id).parentNode;
+        var keyset_cont = keyset.parentNode;
+        keyset_cont.removeChild(keyset);
+        
+        keyset = null
+        
+        keyset = document.createElement("keyset");
+            
+        var keydef = document.createElement("key");
+        var key = tinyurlgen.shortcut.key;
+        
+        keydef.setAttribute("id", keydef_id);
+        
+        if(tinyurlgen.settings.shortcutenabled)
+        {
+            if(key.indexOf("VK_") > -1)
+            {
+                keydef.setAttribute("keycode", key);
+            }
+            else
+            {
+                keydef.setAttribute("key", key);
+            }
+            keydef.setAttribute("oncommand", "tinyurlgen.generatedefault(event)");
+            var mods = [];
+            for(var x in tinyurlgen.shortcut.modifiers)
+            {
+                if(tinyurlgen.shortcut.modifiers[x])
+                {
+                    mods.push(x);
+                }
+            }
+            keydef.setAttribute("modifiers", mods.join(","));
+        }
+        
+        keyset.appendChild(keydef);
+        keyset_cont.appendChild(keyset);
+        
         //Get button references
         var create = document.getElementById('tinyurlgen-button-create');
         var createwithpreview = document.getElementById('tinyurlgen-button-create-with-preview');
+        
+        //Clear Shortcut Key text
+        create.removeAttribute("acceltext")
+        createwithpreview.removeAttribute("acceltext")
+        
         //If Create Previewable link by default...
         if(tinyurlgen.settings.createpreviewbydefault){
             //Set to default
             createwithpreview.setAttribute("default", true);
+            if(tinyurlgen.settings.shortcutenabled)
+            {
+                createwithpreview.setAttribute("key", keydef_id);
+            }
+            else
+            {
+                createwithpreview.removeAttribute("key")
+            }
             //Unset default
             create.setAttribute("default", "false");
+            create.removeAttribute("key");
             //Move option to top
             createwithpreview.parentNode.insertBefore(createwithpreview, create);
         }
         else{
             //Set to default
             create.setAttribute("default", true);
+            if(tinyurlgen.settings.shortcutenabled)
+            {
+                create.setAttribute("key", keydef_id);
+            }
+            else
+            {
+                create.removeAttribute("key")
+            }
             //Unset default
             createwithpreview.setAttribute("default", "false");
+            createwithpreview.removeAttribute("key");
             //Move option to top
             create.parentNode.insertBefore(create, createwithpreview);
         }
