@@ -6,5 +6,5 @@ pref("extensions.tinyurlgen.shortcutenabled", false);
 pref("extensions.tinyurlgen.shortcutmodifier.accel", false);
 pref("extensions.tinyurlgen.shortcutmodifier.alt", true);
 pref("extensions.tinyurlgen.shortcutmodifier.shift", false);
-pref("extensions.tinyurlgen.shortcutkey", "VK_G");
+pref("extensions.tinyurlgen.shortcutkey", "G");
 pref("extensions.tinyurlgen.firstrun", true);
