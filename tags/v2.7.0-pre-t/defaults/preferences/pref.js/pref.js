@@ -1,0 +1,10 @@
+pref("extensions.tinyurlgen.createpreviewbydefault", false);
+pref("extensions.tinyurlgen.exposedestination", true);
+pref("extensions.tinyurlgen.showcontextoptionforpage", true);
+pref("extensions.tinyurlgen.showcontextoptionforlinks", true);
+pref("extensions.tinyurlgen.shortcutenabled", false);
+pref("extensions.tinyurlgen.shortcutmodifier.accel", false);
+pref("extensions.tinyurlgen.shortcutmodifier.alt", true);
+pref("extensions.tinyurlgen.shortcutmodifier.shift", false);
+pref("extensions.tinyurlgen.shortcutkey", "G");
+pref("extensions.tinyurlgen.firstrun", true);
