@@ -1,0 +1,1 @@
+A simple, lightweight extension for FireFox to allow the generation of TinyURLs without having to leave the page.
